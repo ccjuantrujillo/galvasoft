@@ -23,7 +23,7 @@ class Inicio extends CI_Controller {
         $data['form_close'] = form_close(); 
         $data['txtUsuario'] = form_input(array('name'=>'txtUsuario','id'=>'txtUsuario','value' =>'','maxlength' => '100','class' => 'cajaMedia2','onkeypress' => 'capLock(event)'));
         $data['txtClave']   = form_password(array('name'=>'txtClave','id'=>'txtClave','value'=>'','maxlength'=>'32','class' =>'cajaMedia2','onKeyPress'=>'return submitenter(this,event);return capLock(event)'));
-        $data['cboEntidad'] = form_dropdown('compania',$this->entidad_model->seleccionar(),'',"id='compania' class='comboGrande'");        
+		$data['cboEntidad'] = form_dropdown('compania',$this->entidad_model->seleccionar(),'',"id='compania' class='comboGrande'");        
         $data['onload']     = "onload=\"$('#txtUsuario').focus();\"";   
         $this->load->view("inicio",$data);
     }
@@ -40,7 +40,7 @@ class Inicio extends CI_Controller {
             $txtClave   = $this->input->post('txtClave');
             $compania   = $this->input->post('compania');
             $usuarios   = $this->usuario_model->ingresar(trim($txtUsuario),md5(trim($txtClave)),$compania);
-            if(count((array)$usuarios)>0){
+			if(count((array)$usuarios)>0){
                 $data = array(
                             'nomper'   => $usuarios->PERSC_Nombre." ".$usuarios->PERSC_ApellidoPaterno,
                             'login'    => $usuarios->USUA_usuario,

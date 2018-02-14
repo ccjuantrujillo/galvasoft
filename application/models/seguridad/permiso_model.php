@@ -25,9 +25,9 @@ class Permiso_model extends CI_Model{
         }  
         $query = $this->db->get();
         $resultado = array();
-        if($query->num_rows>0){
+        //if($query->num_rows>0){
             $resultado = $query->result();
-        }
+        //}
         return $resultado;
     }
     

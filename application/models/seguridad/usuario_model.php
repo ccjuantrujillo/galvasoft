@@ -19,7 +19,6 @@ class Usuario_model extends CI_Model{
         $this->db->join('persona as p','p.PERSP_Codigo=u.PERSP_Codigo','inner');  
         $this->db->where($where);
         $query = $this->db->get();
-		print_r($query);die();
         $resultado = new stdClass();
         //if($query->num_rows>1) exit('Existe . mas de 1 resultado');
         //if($query->num_rows==1){

@@ -26,9 +26,11 @@ class Entidad_model extends CI_Model{
         $this->db->join('empresa as e','e.EMPRP_Codigo=c.EMPRP_Codigo','inner');     
         $query = $this->db->get();
         $resultado = array();
-        if($query->num_rows>0){
+
+        //if($query->count_all>0){
             $resultado = $query->result();
-        }
+        //}
+
         return $resultado;
     }
 	
@@ -40,10 +42,10 @@ class Entidad_model extends CI_Model{
         $this->db->where($where);
         $query = $this->db->get();
         $resultado = new stdClass();
-        if($query->num_rows>1) exit('Existe mas de 1 resultado');
-        if($query->num_rows==1){
+        //if($query->num_rows>1) exit('Existe mas de 1 resultado');
+        //if($query->num_rows==1){
             $resultado = $query->row();
-        }
+        //}
         return $resultado;
     }
 	
