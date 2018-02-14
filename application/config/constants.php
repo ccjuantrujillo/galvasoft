@@ -42,9 +42,9 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
 define('titulo','Metales Ingenier&iacute;a y Construcci&oacute;n');
 define('pie','2015 Administrador de cursos online');
-define('css',"http://localhost:82/galvasoft/css/");
-define('img',"http://localhost:82/galvasoft/img/");
-define('js',"http://localhost:82/galvasoft/js/");
+define('css',"http://localhost:81/galvasoft/css/");
+define('img',"http://localhost:81/galvasoft/img/");
+define('js',"http://localhost:81/galvasoft/js/");
 define('almacen',"almacen/");
 define('compras',"compras/");
 define('finanzas',"finanzas/");
