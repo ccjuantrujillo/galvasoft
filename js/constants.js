@@ -1,1 +1,0 @@
-var base_url  = "http://localhost:82/galvasoft/";
